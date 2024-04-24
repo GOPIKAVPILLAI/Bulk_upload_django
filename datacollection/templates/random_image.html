@@ -1,0 +1,18 @@
+<!-- random_image.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image</title>
+</head>
+<body>
+    <div style="width: 50%; height: 550px; float:left;">
+    <h1>Image</h1>
+    <img src="{{ random_image.image.url }}" alt="Random Image">
+    </div>
+    <div>
+    <h2>Upload data File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </div>
